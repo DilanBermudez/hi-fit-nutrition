@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hi Fit Nutrition</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+        <header>
+
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo de Hi Fit Nutrition">
+            </div>
+
+
+            <button id="menuBoton" class="menu-boton">
+                ☰
+            </button>
+
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+
+            <!-- Carrito -->
+
+            <div class="carrito-header">
+
+                <button id="botonCarrito" class="boton-carrito">
+                    🛒
+                    <span id="contadorCarrito">0</span>
+                </button>
+
+
+                <div id="carritoPanel" class="carrito-panel">
+
+                    <h3>🛒 Mi carrito</h3>
+
+                    <div id="listaCarrito">
+                        <p>Tu carrito está vacío.</p>
+                    </div>
+
+
+                    <div class="total-carrito">
+
+                        <h4>
+                            Total:
+                            $<span id="total">0</span>
+                        </h4>
+
+                        <button id="vaciarCarrito">
+                            Vaciar carrito
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Sección principal -->
+        <section id="inicio" class="inicio">
+
+            <h1>Potencia tu mejor versión</h1>
+
+            <p>
+                Suplementación deportiva para acompañarte
+                en cada entrenamiento y alcanzar tus objetivos.
+            </p>
+
+            <a href="#productos" class="boton">
+                Ver productos
+            </a>
+
+        </section>
+
+
+        <!-- Productos -->
+        <section id="productos">
+
+            <h2>Nuestros productos</h2>
+
+            <div class="productos">
+
+                <article class="producto">
+
+                    <h3>Proteína Whey</h3>
+
+                    <p>
+                        Complementa tu alimentación y apoya
+                        el desarrollo muscular.
+                    </p>
+
+                    <p class="precio">$120.000</p>
+
+                    <button
+                        class="btn-agregar"
+                        data-id="1"
+                        data-nombre="Proteína Whey"
+                        data-precio="120000">
+                        Agregar al carrito
+                    </button>
+
+                </article>
+
+ 
+                <article class="producto">
+
+                    <h3>Creatina</h3>
+
+                    <p>
+                        Complementa tu rutina deportiva
+                        y entrenamiento.
+                    </p>
+
+                    <p class="precio">$80.000</p>
+
+                     <button
+                        class="btn-agregar"
+                        data-id="2"
+                        data-nombre="Creatina"
+                        data-precio="80000">
+                        Agregar al carrito
+                    </button>
+
+                </article>
+
+                <article class="producto">
+
+                    <h3>Aminoácidos</h3>
+
+                    <p>
+                        Complementa tu rutina deportiva
+                        con una adecuada suplementación.
+                    </p>
+
+                    <p class="precio">$65.000</p>
+
+                    <button
+                        class="btn-agregar"
+                        data-id="3"
+                        data-nombre="Aminoácidos"
+                        data-precio="65000">
+                        Agregar al carrito
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Sobre nosotros -->
+        <section id="nosotros">
+
+            <h2>¿Quiénes somos?</h2>
+
+            <p>
+                En Hi Fit Nutrition buscamos acompañar a las personas
+                que desean mejorar su rendimiento y bienestar mediante
+                productos de suplementación deportiva.
+            </p>
+
+            <p>
+                Nuestro objetivo es ofrecer alternativas que acompañen
+                diferentes estilos de entrenamiento y objetivos deportivos.
+            </p>
+
+        </section>
+
+
+        <!-- Contacto -->
+        <section id="contacto">
+
+            <h2>Contáctanos</h2>
+
+            <form id="formulario">
+
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Escribe tu nombre"
+                    >
+                </div>
+
+
+                <div>
+                    <label for="correo">Correo electrónico:</label>
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="ejemplo@correo.com"
+                    >
+                </div>
+
+
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        placeholder="Escribe tu mensaje"
+                    ></textarea>
+                </div>
+
+
+                <button type="submit">
+                    Enviar mensaje
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Pie de página -->
+    <footer>
+
+        <p>
+            &copy; 2026 Hi Fit Nutrition. Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
