@@ -1,0 +1,713 @@
+/* =========================
+   ESTILOS GENERALES
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ENCABEZADO
+   ========================= */
+
+header {
+    background-color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 8%;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    gap: 25px;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.logo img {
+    width: 120px;
+    display: block;
+}
+
+
+/* =========================
+   MENÚ DE NAVEGACIÓN
+   ========================= */
+
+nav ul {
+    display: flex;
+
+    list-style: none;
+
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: #222;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #168fd5;
+}
+
+
+/* =========================
+   BOTÓN MENÚ RESPONSIVE
+   ========================= */
+
+.menu-boton {
+    display: none;
+
+    background-color: #168fd5;
+
+    color: white;
+
+    border: none;
+
+    font-size: 24px;
+
+    padding: 8px 12px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.menu-boton:hover {
+    background-color: #7b3fc6;
+}
+
+
+/* =========================
+   CARRITO EN EL HEADER
+   ========================= */
+
+.carrito-header {
+    position: relative;
+}
+
+
+/* Botón del carrito */
+
+.boton-carrito {
+    background-color: transparent;
+
+    border: none;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    position: relative;
+
+    padding: 8px;
+
+    transition: 0.3s;
+}
+
+.boton-carrito:hover {
+    transform: scale(1.1);
+}
+
+
+/* Contador de productos */
+
+#contadorCarrito {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    background-color: #7b3fc6;
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+}
+
+
+/* =========================
+   PANEL DEL CARRITO
+   ========================= */
+
+.carrito-panel {
+    display: none;
+
+    position: absolute;
+
+    top: 50px;
+
+    right: 0;
+
+    width: 350px;
+
+    max-height: 500px;
+
+    overflow-y: auto;
+
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+    z-index: 2000;
+}
+
+
+/* Mostrar carrito */
+
+.carrito-panel.carrito-abierto {
+    display: block;
+}
+
+
+/* Título del carrito */
+
+.carrito-panel h3 {
+    color: #168fd5;
+
+    margin-bottom: 20px;
+
+    font-size: 22px;
+}
+
+
+/* =========================
+   PRODUCTOS DEL CARRITO
+   ========================= */
+
+.item-carrito {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.item-carrito span {
+    flex: 1;
+}
+
+
+/* =========================
+   BOTÓN ELIMINAR
+   ========================= */
+
+.btn-eliminar {
+    background-color: #e74c3c;
+
+    color: white;
+
+    border: none;
+
+    padding: 6px 10px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.btn-eliminar:hover {
+    background-color: #c0392b;
+}
+
+
+/* =========================
+   TOTAL DEL CARRITO
+   ========================= */
+
+.total-carrito {
+    margin-top: 20px;
+
+    border-top: 1px solid #ddd;
+
+    padding-top: 15px;
+}
+
+.total-carrito h4 {
+    margin-bottom: 15px;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   BOTÓN VACIAR CARRITO
+   ========================= */
+
+#vaciarCarrito {
+    width: 100%;
+
+    padding: 10px;
+
+    background-color: #7b3fc6;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+#vaciarCarrito:hover {
+    background-color: #168fd5;
+}
+
+
+/* =========================
+   SECCIÓN INICIO
+   ========================= */
+
+.inicio {
+    min-height: 80vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #168fd5,
+        #7b3fc6
+    );
+
+    color: white;
+}
+
+.inicio h1 {
+    font-size: 50px;
+
+    margin-bottom: 20px;
+}
+
+.inicio p {
+    max-width: 600px;
+
+    font-size: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BOTÓN PRINCIPAL
+   ========================= */
+
+.boton {
+    display: inline-block;
+
+    background-color: white;
+
+    color: #168fd5;
+
+    padding: 12px 25px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #222;
+
+    color: white;
+}
+
+
+/* =========================
+   SECCIONES
+   ========================= */
+
+section {
+    padding: 70px 8%;
+}
+
+section h2 {
+    text-align: center;
+
+    font-size: 32px;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   PRODUCTOS
+   ========================= */
+
+.productos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.producto {
+    background-color: white;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto h3 {
+    color: #168fd5;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.producto p {
+    margin-bottom: 20px;
+}
+
+
+/* Precio */
+
+.producto .precio {
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #7b3fc6;
+}
+
+
+/* Botón de agregar */
+
+.producto button {
+    background-color: #7b3fc6;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 20px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.producto button:hover {
+    background-color: #168fd5;
+}
+
+
+/* =========================
+   NOSOTROS
+   ========================= */
+
+#nosotros {
+    background-color: white;
+
+    text-align: center;
+}
+
+#nosotros p {
+    max-width: 750px;
+
+    margin: 0 auto 15px;
+}
+
+
+/* =========================
+   FORMULARIO
+   ========================= */
+
+#contacto {
+    background-color: #f5f7fa;
+}
+
+form {
+    max-width: 600px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-family: inherit;
+}
+
+textarea {
+    height: 120px;
+
+    resize: vertical;
+}
+
+form button {
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: #168fd5;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #7b3fc6;
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+   ========================= */
+
+footer {
+    background-color: #222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* =========================
+   TABLETS
+   ========================= */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .productos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .inicio h1 {
+        font-size: 40px;
+    }
+
+}
+
+
+/* =========================
+   CELULARES
+   ========================= */
+
+@media (max-width: 600px) {
+
+    /* Header */
+
+    header {
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+
+        padding: 15px 5%;
+    }
+
+
+    /* Botón menú */
+
+    .menu-boton {
+        display: block;
+    }
+
+
+    /* Menú oculto */
+
+    nav {
+        display: none;
+
+        width: 100%;
+    }
+
+
+    /* Menú abierto */
+
+    nav.menu-abierto {
+        display: block;
+    }
+
+
+    /* Links del menú */
+
+    nav ul {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 15px;
+
+        padding-top: 15px;
+    }
+
+
+    /* Inicio */
+
+    .inicio {
+        min-height: 70vh;
+    }
+
+    .inicio h1 {
+        font-size: 32px;
+    }
+
+    .inicio p {
+        font-size: 17px;
+    }
+
+
+    /* Productos */
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Espaciado */
+
+    section {
+        padding: 50px 5%;
+    }
+
+
+    /* Carrito en celular */
+
+    .carrito-panel {
+        position: fixed;
+
+        top: 80px;
+
+        right: 15px;
+
+        width: calc(100% - 30px);
+
+        max-width: 350px;
+    }
+
+}
