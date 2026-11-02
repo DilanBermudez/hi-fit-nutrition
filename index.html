@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hi Fit Nutrition</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo de Hi Fit Nutrition">
+        </div>
+
+        <!-- BOTÓN DEL MENÚ RESPONSIVE -->
+        <button
+            id="menuBoton"
+            class="menu-boton"
+            type="button"
+            aria-label="Abrir menú de navegación"
+            aria-controls="menu"
+        >
+            ☰
+        </button>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav id="menu">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#registro">Crear cuenta</a></li>
+            </ul>
+        </nav>
+
+        <!-- ACCIONES: CUENTA Y CARRITO -->
+        <div class="acciones-header">
+
+            <!-- CUENTA DEL CLIENTE -->
+            <div class="cuenta-header">
+
+                <button
+                    type="button"
+                    id="botonCuenta"
+                    class="boton-cuenta"
+                    aria-label="Abrir menú de cuenta"
+                    aria-expanded="false"
+                    aria-controls="cuentaPanel"
+                >
+                    <span aria-hidden="true">👤</span>
+                </button>
+
+                <!-- PANEL DE CUENTA -->
+                <div id="cuentaPanel" class="cuenta-panel">
+
+                    <h3>Mi cuenta</h3>
+
+                    <a href="#registro" id="enlaceCrearCuenta">
+                        Crear cuenta
+                    </a>
+
+                    <button type="button" id="enlaceMiCuenta">
+                        Ver mis datos
+                    </button>
+
+                    <div
+                        id="datosCuenta"
+                        class="datos-cuenta"
+                        hidden
+                    ></div>
+
+                </div>
+
+            </div>
+
+            <!-- CARRITO DE COMPRAS -->
+            <div class="carrito-header">
+
+                <button
+                    id="botonCarrito"
+                    class="boton-carrito"
+                    type="button"
+                    aria-label="Abrir carrito de compras"
+                >
+                    🛒
+                    <span id="contadorCarrito">0</span>
+                </button>
+
+                <!-- PANEL DEL CARRITO -->
+                <div id="carritoPanel" class="carrito-panel">
+
+                    <h3>🛒 Mi carrito</h3>
+
+                    <div id="listaCarrito">
+                        <p>Tu carrito está vacío.</p>
+                    </div>
+
+                    <div class="total-carrito">
+
+                        <h4>
+                            Total:
+                            $<span id="total">0</span>
+                        </h4>
+
+                        <button id="vaciarCarrito" type="button">
+                            Vaciar carrito
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- INICIO -->
+        <section id="inicio" class="inicio">
+
+            <h1>Potencia tu mejor versión</h1>
+
+            <p>
+                Suplementación deportiva para acompañarte
+                en cada entrenamiento y alcanzar tus objetivos.
+            </p>
+
+            <a href="#productos" class="boton">
+                Ver productos
+            </a>
+
+        </section>
+
+        <!-- PRODUCTOS -->
+        <section id="productos">
+
+            <h2>Nuestros productos</h2>
+
+            <div class="productos">
+
+                <!-- PRODUCTO 1 -->
+                <article class="producto">
+
+                    <h3>Proteína Whey</h3>
+
+                    <p>
+                        Complementa tu alimentación y apoya
+                        el desarrollo muscular.
+                    </p>
+
+                    <p class="precio">$120.000</p>
+
+                    <button
+                        class="btn-agregar"
+                        data-id="1"
+                        data-nombre="Proteína Whey"
+                        data-precio="120000"
+                        type="button"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </article>
+
+                <!-- PRODUCTO 2 -->
+                <article class="producto">
+
+                    <h3>Creatina</h3>
+
+                    <p>
+                        Complementa tu rutina deportiva
+                        y entrenamiento.
+                    </p>
+
+                    <p class="precio">$80.000</p>
+
+                    <button
+                        class="btn-agregar"
+                        data-id="2"
+                        data-nombre="Creatina"
+                        data-precio="80000"
+                        type="button"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </article>
+
+                <!-- PRODUCTO 3 -->
+                <article class="producto">
+
+                    <h3>Aminoácidos</h3>
+
+                    <p>
+                        Complementa tu rutina deportiva
+                        con una adecuada suplementación.
+                    </p>
+
+                    <p class="precio">$65.000</p>
+
+                    <button
+                        class="btn-agregar"
+                        data-id="3"
+                        data-nombre="Aminoácidos"
+                        data-precio="65000"
+                        type="button"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- SOBRE NOSOTROS -->
+        <section id="nosotros">
+
+            <h2>¿Quiénes somos?</h2>
+
+            <p>
+                En Hi Fit Nutrition buscamos acompañar a las personas
+                que desean mejorar su rendimiento y bienestar mediante
+                productos de suplementación deportiva.
+            </p>
+
+            <p>
+                Nuestro objetivo es ofrecer alternativas que acompañen
+                diferentes estilos de entrenamiento y objetivos deportivos.
+            </p>
+
+        </section>
+
+        <!-- REGISTRO DE CLIENTES -->
+        <section id="registro">
+
+            <h2>Únete a Hi Fit Nutrition</h2>
+
+            <p class="texto-registro">
+                Crea tu cuenta y forma parte de nuestra comunidad fitness.
+            </p>
+
+            <form id="formularioRegistro">
+
+                <div>
+                    <label for="nombreRegistro">Nombre completo:</label>
+
+                    <input
+                        type="text"
+                        id="nombreRegistro"
+                        name="nombreRegistro"
+                        placeholder="Escribe tu nombre completo"
+                        required
+                        minlength="3"
+                        autocomplete="name"
+                    >
+                </div>
+
+                <div>
+                    <label for="correoRegistro">Correo electrónico:</label>
+
+                    <input
+                        type="email"
+                        id="correoRegistro"
+                        name="correoRegistro"
+                        placeholder="ejemplo@correo.com"
+                        required
+                        autocomplete="email"
+                    >
+                </div>
+
+                <div>
+                    <label for="telefonoRegistro">Teléfono:</label>
+
+                    <input
+                        type="tel"
+                        id="telefonoRegistro"
+                        name="telefonoRegistro"
+                        placeholder="Tu número de teléfono"
+                        required
+                        minlength="7"
+                        maxlength="15"
+                        pattern="[0-9+() -]{7,15}"
+                        autocomplete="tel"
+                    >
+                </div>
+
+                <div>
+                    <label for="passwordRegistro">Contraseña:</label>
+
+                    <input
+                        type="password"
+                        id="passwordRegistro"
+                        name="passwordRegistro"
+                        placeholder="Mínimo 8 caracteres"
+                        required
+                        minlength="8"
+                        autocomplete="new-password"
+                    >
+                </div>
+
+                <div>
+                    <label for="confirmacionRegistro">
+                        Confirmar contraseña:
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmacionRegistro"
+                        name="confirmacionRegistro"
+                        placeholder="Escribe nuevamente tu contraseña"
+                        required
+                        minlength="8"
+                        autocomplete="new-password"
+                    >
+                </div>
+
+                <button type="submit">
+                    Crear mi cuenta
+                </button>
+
+                <p
+                    id="mensajeRegistro"
+                    class="mensaje-registro"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto">
+
+            <h2>Contáctanos</h2>
+
+            <form id="formulario">
+
+                <div>
+                    <label for="nombre">Nombre:</label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Escribe tu nombre"
+                    >
+                </div>
+
+                <div>
+                    <label for="correo">Correo electrónico:</label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="ejemplo@correo.com"
+                    >
+                </div>
+
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        placeholder="Escribe tu mensaje"
+                    ></textarea>
+                </div>
+
+                <button type="submit">
+                    Enviar mensaje
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            &copy; 2026 Hi Fit Nutrition. Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
